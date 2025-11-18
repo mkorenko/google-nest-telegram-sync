@@ -158,7 +158,7 @@ class TelegramEventsSync(object):
             
             video_media = InputMediaVideo(
                 media=video_io,
-                caption=f"{video_caption} [{time_str}]"
+                caption=f"{time_str}"
             )
 
             await self._telegram_bot.send_media_group(
