@@ -20,9 +20,9 @@ load_dotenv()
 class TelegramEventsSync(object):
 
     # Preset formats
-    FORMAT_24H = '%H:%M:%S %d/%m/%Y'  # 23:40:50 22/10/2025
-    FORMAT_12H = '%I:%M:%S %p %m/%d/%Y'  # 11:40:50 PM 10/22/2025
     
+    FORMAT_24H = '%d/%m/%Y %H:%M:%S'  # 22/10/2025 23:40:50
+    FORMAT_12H = '%m/%d/%Y %I:%M:%S %p'  # 10/22/2025 11:40:50 PM
     SENT_EVENTS_FILE = 'data/sent_events.json'
 
     def __init__(self, telegram_bot_token, telegram_channel_id, nest_camera_devices, timezone=None, time_format=None, force_resend_all=False) -> None:
